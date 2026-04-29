@@ -1,0 +1,10 @@
+Which SOLID principle is being violated:
+- S, Single Responsibility Principle (SRP) and O, Open/Closed Principle (OCP).
+
+Where in the design the problem occurs:
+- The 'MatchSummary' class is responsible for too many things. This should all be divided in different classes.
+- Because the export methods are all hardcoded into a class, adding a new format in the future forces you to modify that class.
+
+Justify your solution:
+- By breaking the class down into three different ones ('MatchData', 'MatchPerformanceCalculator' and 'MatchSummaryBuilder'), they now have only one job and one reason to be modified.
+- Additionally, we have an interface 'IMatchExporter' so that we can expand the exporting with new types without need for modification.

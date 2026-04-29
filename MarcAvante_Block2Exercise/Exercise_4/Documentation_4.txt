@@ -1,0 +1,8 @@
+Which SOLID principle is being violated:
+- I, Interface Segregation Principle (ISP) and L, Liskov Substitution Principle (LSP).
+
+Where in the design the problem occurs:
+- The current interface forces classes to implement methods they don't need and throw exceptions. This also makes their objects to not be safely treated as generic elements by the system.
+
+Justify your solution:
+- Splitting our interface 'IUIElement' into three separate 'IClickable', 'IHoverable' and 'IDraggable' interfaces, we can now assign to the classes only the behaviors they need. This also removes the need for exception-throwing and allows safe substitution in the system.

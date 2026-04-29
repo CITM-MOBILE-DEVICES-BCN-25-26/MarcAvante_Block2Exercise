@@ -1,0 +1,8 @@
+Which SOLID principle is being violated:
+- O, Open/Closed Principle (OCP).
+
+Where in the design the problem occurs:
+- The 'ApplySkill' method relies on a switch statement checking a string. Every time a new skill is added, this method has to be modified.
+
+Justify your solution:
+- By creating an interface 'ISkill', the class is now closed for modification but open for extension. We only need to create a new class implementing the interface without touching the 'SkillSystem' logic to add a new skill.

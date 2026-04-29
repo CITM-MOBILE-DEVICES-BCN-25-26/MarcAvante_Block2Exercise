@@ -1,0 +1,8 @@
+Which SOLID principle is being violated:
+- O, Open/Closed Principle (OCP) and D, Dependency Inversion Principle (DIP).
+
+Where in the design the problem occurs:
+- Adding a new reward type requires modifying the function directly. It also depends on hardcoded strings rather than interfaces.
+
+Justify your solution:
+- I created an 'IReward' interface and made 'RewardSystem' depend on it. This allows us to expand without needing to modify the reward system and also gets rid of the dependency of strings and makes it more open for abstraction.

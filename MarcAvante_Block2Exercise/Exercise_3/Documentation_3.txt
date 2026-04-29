@@ -1,0 +1,8 @@
+Which SOLID principle is being violated:
+- L, Liskov Substitution Principle (LSP).
+
+Where in the design the problem occurs:
+- The Wall class inherits from GameEntity but has to throw an Exception for moving. This means that it can't replace an entity inside 'MovementSystem' without crashing.
+
+Justify your solution:
+- By separating the movement into an interface 'IMovable' and changing the requirement on 'MovementSystem', we now make sure only movable entities can be passed and we prevent exceptions.
